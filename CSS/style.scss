@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$searchbar-color : rgb(221, 221, 221);
+$pinktheme : #ee2f63;
+
+.nav-logo {
+    img {
+        width: 50px;
+        height: 33px;
+    }
+    
+}
+form {
+    .searchbar {
+        width: 450px;
+        border-radius: 25px;
+        background-color: $searchbar-color;
+        color: rgb(209, 208, 208);
+        transition: width 0.4s ease-in;
+        &:focus {
+            transition: 2ms ease-in;
+            width: 500px;
+            transition: width 0.4s ease-in-out;
+            border: #817f7f;
+            box-shadow: none;
+        }
+        @media screen and (max-width:768px) {
+            margin-top: 10px;
+            width: 200px;
+            &:focus {
+                width: 100%;
+            }
+        }
+    }
+}
+.notification {
+    color: #817f7f;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    @media screen and (max-width:768px) {
+        margin-top: 10px;
+    }
+    img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+        border-radius: 50%;
+        &:hover {
+            background-color: #c4c3c3;
+            transition: 1s ease-in-out;
+        }        
+    }
+    .notify-num {
+        position: absolute;
+        top: 0;
+        right: 10%;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        background-color: $pinktheme;
+        color: white;
+        border-radius: 100%;
+        height: 20px;
+        width: 20px;
+    }
+}
+.nav-item {
+    display: flex;
+    .nav-person-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+.content-container {
+    height: 100%;
+    .row {
+        background-color: white;
+        .sidebar {
+            padding-top: 40px;
+            padding-left: 0;
+            padding-right: 0;
+            background-color: #303030;
+            @media screen and (max-width:768px) {
+                padding-top: 10px;
+            }
+            ul{
+                padding-left: 0;
+                .sidebar-nav {
+                    list-style: none;
+                    color: white;
+                    font-size: 18px;
+                    padding: 15px 50px;
+                    &:hover {
+                        background-color: $pinktheme;
+                    }
+                }
+            }
+            
+        }
+        .main-content {
+            margin-left: 0;
+            padding: 0;
+            background-color: white;
+            .header-sec {
+                display: flex;
+                .row {
+                    margin: 0;
+                    .imagehead-col {
+                        padding: 0;
+                        margin: 0;
+                        .headerimg {
+                            width: 100%;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.content-heading {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    .hotelhead {
+        margin-top: 15px;
+        margin-left: 15px;
+        font-size: 28px;
+        color: #817f7f;
+    }
+    .content-head-right {
+        display: flex;
+        a {
+            margin-top: 20px;
+            margin-right: 20px;
+            height: 30px;
+            color: $pinktheme ;
+            text-decoration: none;
+            border-bottom: 2px solid $pinktheme;
+            padding: 0;
+        }
+        .rating {
+            padding: 5px 10px;
+            background-color: $pinktheme;
+            color: white;
+            .rating-num {
+                font-size: 28px;
+            }
+            .totalvotes {
+                font-size: 12px;
+            }
+        }
+    }
+}
+.content-div {
+    background-color: #f9f9f9;
+    .row {
+        background-color: #f9f9f9;
+        padding: 30px;
+        margin: 0;
+        .con-description {
+            background-color: white;
+            padding: 30px;
+            @media screen and (max-width: 768px) {
+                padding: 10px;
+            }
+            .content-para {
+                color: black;
+            }
+        }
+        .reviews {
+            margin: 0;
+            color: white;
+            @media screen and (max-width:768px) {
+                margin-top: 20px;
+            }
+                .row {
+                    padding: 0;
+                    .col-12 {
+                        margin-bottom: 30px;
+                        .card {  
+                            border: none !important;
+                            position: relative;
+                            box-shadow: 1px 1px 5px #b3b3b343;
+                            .double-inverted {
+                                position: absolute;
+                                width: 100px;
+                                height: 100px;
+                                top: -10px;
+                                left: -5px;
+                            }
+                            .card-body {
+                                position: relative;
+                                padding: 30px;
+                                @media screen and (max-width:1200px) {
+                                    padding: 10px;
+                                }
+                                .card-text {
+                                    z-index: 9999;
+                                    color: #817f7f;
+                                }
+                                .reviewer {
+                                    display: flex;
+                                    .reviewer-img {
+                                        width: 50px;
+                                        height: 50px;
+                                        border-radius: 50%;
+                                        margin: auto 0;
+                                    }
+                                    .review-details {
+                                        width: 50%;
+                                        padding: 10px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        line-height: 22px;
+                                        .review-name {
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                            margin-bottom: 10px;
+                                            @media screen and (max-width:1200px) {
+                                                font-size: 12px;
+                                            }
+                                        }
+                                        .review-date {
+                                            color: #817f7f;
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                            @media screen and (max-width:1200px) {
+                                                font-size: 10px;
+                                            }
+                                        }
+                                    }
+                                    .user-rating {
+                                        font-size: 38px;
+                                        color: $pinktheme;
+                                        margin: auto 0;
+                                    }
+                                }
+                            }
+                        }
+                        &.show-all {
+                            text-align: center;
+                        }
+                        .review-showmore {
+                            margin: 0 auto;
+                            text-decoration: none;
+                            color: $pinktheme;
+                            border-bottom: 1px solid $pinktheme;
+                        }
+                    }
+                }
+        }
+        .description-message {
+            margin: 0;
+            color: white;
+            @media screen and (max-width: 768px) {
+                text-align: center;
+            }
+        }
+        .inner-row {
+            background-color: white;
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+        }
+        .social-connection {
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 1200px) {
+                p {
+                    width: 50%;
+                }
+            }
+            .social-friend {
+                display: flex;
+                
+                img {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    margin-left: -20px;
+                    border: 3px solid white;
+                }
+            }
+        }
+        .description-message {
+            .alert-msg {
+                color:#817f7f;
+                margin-bottom: 50px;
+            }
+            .book-now {
+                border: none;
+                font-size: 20px;
+                padding: 15px 30px;
+                background: rgb(238,47,99);
+                background: linear-gradient(90deg, rgba(238,47,99,1) 0%, rgba(238,47,99,1) 43%, rgba(161,37,70,1) 100%);    
+                color: white;
+                border-radius: 50px;
+                width: 50%;
+                text-decoration: none;
+                &:hover {
+                    background: linear-gradient(90deg,rgba(238,47,99,1) 0%, rgb(250, 175, 196) 68%, rgb(250, 175, 196) 100%); 
+                    transition: .5s ease-in;
+                    color: #303030;
+                }
+                @media screen and (max-width:1200px) {
+                    width: 100%;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+   
+}
+
+.footer {
+    background-color: transparent;
+    .footer-row {
+        background-color: #f9f9f9;
+        padding: 0;
+        
+        .copyright-foot {
+            padding: 0;
+            background-color: rgb(48, 48, 48) !important;
+            .copyright {
+                width: 100%;
+                color:white;
+                opacity: 50%;
+                p {
+                    margin: 0;
+                    font-size: 16px;
+                    text-align: center;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+        
+    }
+    
+}

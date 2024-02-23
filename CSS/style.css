@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-logo img {
+  width: 50px;
+  height: 33px;
+}
+
+form .searchbar {
+  width: 450px;
+  border-radius: 25px;
+  background-color: rgb(221, 221, 221);
+  color: rgb(209, 208, 208);
+  transition: width 0.4s ease-in;
+}
+form .searchbar:focus {
+  transition: 2ms ease-in;
+  width: 500px;
+  transition: width 0.4s ease-in-out;
+  border: #817f7f;
+  box-shadow: none;
+}
+@media screen and (max-width: 768px) {
+  form .searchbar {
+    margin-top: 10px;
+    width: 200px;
+  }
+  form .searchbar:focus {
+    width: 100%;
+  }
+}
+
+.notification {
+  color: #817f7f;
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .notification {
+    margin-top: 10px;
+  }
+}
+.notification img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.notification img:hover {
+  background-color: #c4c3c3;
+  transition: 1s ease-in-out;
+}
+.notification .notify-num {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #ee2f63;
+  color: white;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+}
+
+.nav-item {
+  display: flex;
+}
+.nav-item .nav-person-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.content-container {
+  height: 100%;
+}
+.content-container .row {
+  background-color: white;
+}
+.content-container .row .sidebar {
+  padding-top: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #303030;
+}
+@media screen and (max-width: 768px) {
+  .content-container .row .sidebar {
+    padding-top: 10px;
+  }
+}
+.content-container .row .sidebar ul {
+  padding-left: 0;
+}
+.content-container .row .sidebar ul .sidebar-nav {
+  list-style: none;
+  color: white;
+  font-size: 18px;
+  padding: 15px 50px;
+}
+.content-container .row .sidebar ul .sidebar-nav:hover {
+  background-color: #ee2f63;
+}
+.content-container .row .main-content {
+  margin-left: 0;
+  padding: 0;
+  background-color: white;
+}
+.content-container .row .main-content .header-sec {
+  display: flex;
+}
+.content-container .row .main-content .header-sec .row {
+  margin: 0;
+}
+.content-container .row .main-content .header-sec .row .imagehead-col {
+  padding: 0;
+  margin: 0;
+}
+.content-container .row .main-content .header-sec .row .imagehead-col .headerimg {
+  width: 100%;
+}
+
+.content-heading {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.content-heading .hotelhead {
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 28px;
+  color: #817f7f;
+}
+.content-heading .content-head-right {
+  display: flex;
+}
+.content-heading .content-head-right a {
+  margin-top: 20px;
+  margin-right: 20px;
+  height: 30px;
+  color: #ee2f63;
+  text-decoration: none;
+  border-bottom: 2px solid #ee2f63;
+  padding: 0;
+}
+.content-heading .content-head-right .rating {
+  padding: 5px 10px;
+  background-color: #ee2f63;
+  color: white;
+}
+.content-heading .content-head-right .rating .rating-num {
+  font-size: 28px;
+}
+.content-heading .content-head-right .rating .totalvotes {
+  font-size: 12px;
+}
+
+.content-div {
+  background-color: #f9f9f9;
+}
+.content-div .row {
+  background-color: #f9f9f9;
+  padding: 30px;
+  margin: 0;
+}
+.content-div .row .con-description {
+  background-color: white;
+  padding: 30px;
+}
+@media screen and (max-width: 768px) {
+  .content-div .row .con-description {
+    padding: 10px;
+  }
+}
+.content-div .row .con-description .content-para {
+  color: black;
+}
+.content-div .row .reviews {
+  margin: 0;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .content-div .row .reviews {
+    margin-top: 20px;
+  }
+}
+.content-div .row .reviews .row {
+  padding: 0;
+}
+.content-div .row .reviews .row .col-12 {
+  margin-bottom: 30px;
+}
+.content-div .row .reviews .row .col-12 .card {
+  border: none !important;
+  position: relative;
+  box-shadow: 1px 1px 5px rgba(179, 179, 179, 0.262745098);
+}
+.content-div .row .reviews .row .col-12 .card .double-inverted {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -10px;
+  left: -5px;
+}
+.content-div .row .reviews .row .col-12 .card .card-body {
+  position: relative;
+  padding: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .content-div .row .reviews .row .col-12 .card .card-body {
+    padding: 10px;
+  }
+}
+.content-div .row .reviews .row .col-12 .card .card-body .card-text {
+  z-index: 9999;
+  color: #817f7f;
+}
+.content-div .row .reviews .row .col-12 .card .card-body .reviewer {
+  display: flex;
+}
+.content-div .row .reviews .row .col-12 .card .card-body .reviewer .reviewer-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: auto 0;
+}
+.content-div .row .reviews .row .col-12 .card .card-body .reviewer .review-details {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 22px;
+}
+.content-div .row .reviews .row .col-12 .card .card-body .reviewer .review-details .review-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .content-div .row .reviews .row .col-12 .card .card-body .reviewer .review-details .review-name {
+    font-size: 12px;
+  }
+}
+.content-div .row .reviews .row .col-12 .card .card-body .reviewer .review-details .review-date {
+  color: #817f7f;
+  font-size: 14px;
+  font-weight: 600;
+}
+@media screen and (max-width: 1200px) {
+  .content-div .row .reviews .row .col-12 .card .card-body .reviewer .review-details .review-date {
+    font-size: 10px;
+  }
+}
+.content-div .row .reviews .row .col-12 .card .card-body .reviewer .user-rating {
+  font-size: 38px;
+  color: #ee2f63;
+  margin: auto 0;
+}
+.content-div .row .reviews .row .col-12.show-all {
+  text-align: center;
+}
+.content-div .row .reviews .row .col-12 .review-showmore {
+  margin: 0 auto;
+  text-decoration: none;
+  color: #ee2f63;
+  border-bottom: 1px solid #ee2f63;
+}
+.content-div .row .description-message {
+  margin: 0;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .content-div .row .description-message {
+    text-align: center;
+  }
+}
+.content-div .row .inner-row {
+  background-color: white;
+}
+.content-div .row .inner-row ul {
+  list-style: none;
+  padding: 0;
+}
+.content-div .row .social-connection {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .content-div .row .social-connection p {
+    width: 50%;
+  }
+}
+.content-div .row .social-connection .social-friend {
+  display: flex;
+}
+.content-div .row .social-connection .social-friend img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: -20px;
+  border: 3px solid white;
+}
+.content-div .row .description-message .alert-msg {
+  color: #817f7f;
+  margin-bottom: 50px;
+}
+.content-div .row .description-message .book-now {
+  border: none;
+  font-size: 20px;
+  padding: 15px 30px;
+  background: rgb(238, 47, 99);
+  background: linear-gradient(90deg, rgb(238, 47, 99) 0%, rgb(238, 47, 99) 43%, rgb(161, 37, 70) 100%);
+  color: white;
+  border-radius: 50px;
+  width: 50%;
+  text-decoration: none;
+}
+.content-div .row .description-message .book-now:hover {
+  background: linear-gradient(90deg, rgb(238, 47, 99) 0%, rgb(250, 175, 196) 68%, rgb(250, 175, 196) 100%);
+  transition: 0.5s ease-in;
+  color: #303030;
+}
+@media screen and (max-width: 1200px) {
+  .content-div .row .description-message .book-now {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.footer {
+  background-color: transparent;
+}
+.footer .footer-row {
+  background-color: #f9f9f9;
+  padding: 0;
+}
+.footer .footer-row .copyright-foot {
+  padding: 0;
+  background-color: rgb(48, 48, 48) !important;
+}
+.footer .footer-row .copyright-foot .copyright {
+  width: 100%;
+  color: white;
+  opacity: 50%;
+}
+.footer .footer-row .copyright-foot .copyright p {
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}/*# sourceMappingURL=style.css.map */
